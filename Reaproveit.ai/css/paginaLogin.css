@@ -1,0 +1,496 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green: #465c1d;
+    --green-dark: #394b18;
+    --cream: #fff1e6;
+    --orange: #f3a62b;
+    --text: #171717;
+    --muted: #77736e;
+    --border: #cfcac2;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f1f1;
+    color: var(--text);
+}
+
+
+/* PÁGINA */
+
+.login-page {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+}
+
+
+/* LADO VERDE */
+
+.welcome {
+    background: var(--green);
+    color: white;
+
+    padding: 42px 7vw;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0 28px 28px 0;
+}
+
+
+/* LOGO */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 25px;
+}
+
+.brand-logo {
+    width: 46px;
+    height: 46px;
+
+    border: 2px solid #eee9d8;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 25px;
+}
+
+
+/* TEXTO */
+
+.welcome-content {
+    max-width: 610px;
+
+    margin-top: 105px;
+}
+
+.welcome-label {
+    font-size: 21px;
+
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: clamp(34px, 4vw, 58px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+}
+
+h1 strong {
+    color: var(--orange);
+}
+
+.description {
+    color: #dedfca;
+
+    font-size: 18px;
+
+    line-height: 1.45;
+
+    margin-top: 28px;
+}
+
+
+/* BENEFÍCIOS */
+
+.benefits {
+    list-style: none;
+
+    margin-top: 38px;
+
+    display: grid;
+
+    gap: 17px;
+}
+
+.benefits li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 18px;
+}
+
+
+/* LADO DO LOGIN */
+
+.login-card {
+    background: var(--cream);
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    border-radius: 28px 0 0 28px;
+}
+
+.form-wrapper {
+    width: min(100%, 510px);
+}
+
+
+/* TÍTULO */
+
+h2 {
+    font-size: clamp(35px, 4vw, 54px);
+
+    line-height: .98;
+
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: var(--muted);
+
+    font-size: 18px;
+
+    margin-bottom: 46px;
+}
+
+
+/* CAMPOS */
+
+form>label,
+.modal-box label {
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin: 0 0 10px 4px;
+}
+
+.input-box {
+    height: 58px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    margin-bottom: 32px;
+}
+
+.input-box input {
+    width: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    font-size: 17px;
+
+    background: transparent;
+}
+
+.input-box>span {
+    margin-right: 10px;
+}
+
+.show-password {
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* OPÇÕES */
+
+.options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    color: #68645e;
+
+    font-size: 14px;
+}
+
+.remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.remember input {
+    accent-color: var(--green);
+}
+
+.forgot {
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+}
+
+
+/* BOTÃO */
+
+.enter-button {
+    width: 100%;
+
+    height: 58px;
+
+    border: 0;
+
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.enter-button:hover {
+    background: var(--green-dark);
+}
+
+
+/* MENSAGEM */
+
+.message {
+    min-height: 22px;
+
+    margin-top: 13px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* DIVISÓRIA */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #999;
+
+    margin: 22px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    height: 1px;
+
+    background: #d8d0c7;
+
+    flex: 1;
+}
+
+
+/* CRIAR CONTA */
+
+.signup {
+    text-align: center;
+
+    color: #68645e;
+
+    font-size: 15px;
+}
+
+.signup button {
+    border: 0;
+
+    background: transparent;
+
+    color: var(--green);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+}
+
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .45);
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 20px;
+
+    z-index: 10;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-box {
+    position: relative;
+
+    width: min(100%, 430px);
+
+    background: var(--cream);
+
+    border-radius: 18px;
+
+    padding: 34px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+}
+
+.modal-box h3 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.modal-box p {
+    color: var(--muted);
+
+    margin-bottom: 20px;
+}
+
+.modal-box input {
+    width: 100%;
+
+    height: 52px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 0 14px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    margin-bottom: 15px;
+}
+
+.modal-box .enter-button {
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+
+    top: 12px;
+
+    right: 16px;
+
+    border: 0;
+
+    background: transparent;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 850px) {
+
+    .login-page {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        min-height: 430px;
+
+        border-radius: 0 0 25px 25px;
+
+        padding: 30px 28px 45px;
+    }
+
+    .welcome-content {
+        margin-top: 60px;
+    }
+
+    .login-card {
+        min-height: auto;
+
+        border-radius: 25px 25px 0 0;
+
+        padding: 55px 28px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .login-card {
+        padding: 45px 20px;
+    }
+
+}

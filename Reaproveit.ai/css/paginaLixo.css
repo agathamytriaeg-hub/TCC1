@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f3e8;
+    font-family: 'Montserrat', sans-serif;
+    color: #27321c;
+}
+
+.site {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    margin: 0;
+    background: #f7f3e8;
+    overflow: hidden;
+}
+
+
+/* =========================
+   PARTE SUPERIOR
+========================= */
+
+.hero {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background: #f7f4e9;
+}
+
+.hero-content {
+    width: 52%;
+    padding: 60px 35px 30px 7%;
+    position: relative;
+    z-index: 5;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 5vw, 72px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #c66d00;
+}
+
+.hero p {
+    margin-top: 24px;
+    max-width: 410px;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #45493e;
+}
+
+
+/* =========================
+   COMPOSTEIRA
+========================= */
+
+.hero-art {
+    width: 48%;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+    background: #dfe5bd;
+    border-radius: 50% 0 0 50%;
+}
+
+.imagem-composto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.content {
+    width: 100%;
+    padding: 25px 5% 35px;
+}
+
+.section-title {
+    display: inline-block;
+    background: #596735;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 11px 20px;
+    border-radius: 9px 9px 0 0;
+}
+
+
+/* =========================
+   GRID DOS ALIMENTOS
+========================= */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    padding: 14px;
+    background: #f7f3e8;
+}
+
+
+/* =========================
+   CARDS RETANGULARES
+========================= */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 12px;
+}
+
+.food-card {
+    height: 210px;
+    min-height: 0;
+    padding: 8px;
+
+    background: #fffdf7;
+
+    border: 1px solid #d8d0bd;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    transition: 0.25s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   IMAGENS
+========================= */
+
+.food-image {
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.food-image img {
+    width: 80%;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.food-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 6px 0 10px;
+    color: #303825;
+}
+
+.food-card b {
+    display: block;
+    color: #d27600;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.food-card p {
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #65675e;
+}
+
+
+/* =========================
+   OUTRAS FORMAS
+========================= */
+
+.second-title {
+    margin-top: 18px;
+}
+
+.reuse-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    padding: 14px;
+    background: #f7f3e8;
+}
+
+.reuse-card {
+    min-height: 155px;
+
+    text-align: center;
+
+    padding: 17px 10px;
+
+    border: 1px solid #d8d0bd;
+    border-radius: 12px;
+
+    background: #fffdf7;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+    transition: 0.25s ease;
+}
+
+.reuse-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.reuse-icon {
+    width: 52px;
+    height: 52px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    background: #e5e8d1;
+    border: 1px solid #c8ceb0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 27px;
+}
+
+.reuse-card h3 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.reuse-card p {
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #66695f;
+    margin-top: 6px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    width: 100%;
+    min-height: 90px;
+
+    position: relative;
+
+    background: #3f4e2d;
+    color: white;
+
+    text-align: center;
+
+    padding-top: 27px;
+
+    overflow: hidden;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+footer span {
+    color: #e1a43c;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.leaves {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+
+    color: #73805d;
+
+    font-size: 24px;
+
+    transform: rotate(-15deg);
+}
+
+.leaves.bottom {
+    left: auto;
+    right: 30px;
+
+    transform: rotate(15deg);
+}
+
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+
+.food-card,
+.reuse-card {
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.food-card.show,
+.reuse-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        width: 55%;
+        padding-left: 5%;
+    }
+
+    .hero-art {
+        width: 45%;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .reuse-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        display: block;
+        min-height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 35px 25px 25px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    .hero-art {
+        width: 100%;
+        height: 280px;
+        min-height: 280px;
+        border-radius: 50% 50% 0 0;
+    }
+
+    .imagem-composto {
+        width: 100%;
+        height: 280px;
+    }
+
+    .content {
+        padding: 15px 8px 25px;
+    }
+
+    .section-title {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .food-card {
+        min-height: 210px;
+        padding: 12px 7px;
+    }
+
+    .food-image {
+        height: 80px;
+    }
+
+    .food-image img {
+        height: 80px;
+    }
+
+    .food-card h3 {
+        font-size: 12px;
+    }
+
+    .food-card b {
+        font-size: 9px;
+    }
+
+    .food-card p {
+        font-size: 8px;
+    }
+
+    .reuse-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .reuse-card {
+        min-height: 135px;
+    }
+
+    .reuse-card:nth-child(5) {
+        grid-column: 1 / 3;
+    }
+
+    footer {
+        min-height: 75px;
+        padding-top: 21px;
+    }
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .food-grid {
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .food-card {
+        min-height: 195px;
+    }
+
+    .food-card h3 {
+        font-size: 11px;
+    }
+
+    .food-card p {
+        font-size: 8px;
+    }
+}

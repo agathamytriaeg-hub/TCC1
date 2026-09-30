@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaproveita - Login</title>
+    <link rel="stylesheet" href="/css/paginaLogin.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- LADO ESQUERDO -->
+        <section class="welcome">
+
+            <div class="brand">
+                <div class="brand-logo">♻</div>
+                <span>Reaproveita</span>
+            </div>
+
+            <div class="welcome-content">
+
+                <p class="welcome-label">
+                    🌿 Bem-vindo
+                </p>
+
+                <h1>
+                    Transforme seus
+                    <strong>ingredientes</strong>
+                    em novas possibilidades.
+                </h1>
+
+                <p class="description">
+                    Entre na sua conta e descubra receitas, ideias e formas
+                    inteligentes de evitar o desperdício de alimentos.
+                </p>
+
+                <ul class="benefits">
+                    <li>🥕 Receitas criativas</li>
+                    <li>🌱 Menos desperdícios</li>
+                    <li>🍎 Aproveitamento inteligente</li>
+                </ul>
+
+            </div>
+        </section>
+
+
+        <!-- LADO DIREITO -->
+        <section class="login-card">
+
+            <div class="form-wrapper">
+
+                <h2>
+                    Olá<br>
+                    novamente!
+                </h2>
+
+                <p class="subtitle">
+                    Entre para continuar no Reaproveita
+                </p>
+
+                <form id="loginForm">
+
+                    <label for="email">E-mail</label>
+
+                    <div class="input-box">
+                        <span>✉</span>
+
+                        <input id="email" type="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+
+                    <label for="password">Senha</label>
+
+                    <div class="input-box">
+
+                        <span>🔒</span>
+
+                        <input id="password" type="password" placeholder="Digite sua senha" required>
+
+                        <button type="button" id="togglePassword" class="show-password">
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <div class="options">
+
+                        <label class="remember">
+                            <input type="checkbox" id="remember">
+                            <span>Lembra de mim</span>
+                        </label>
+
+                        <button type="button" class="forgot" id="forgotPassword">
+                            Esqueci minha senha
+                        </button>
+
+                    </div>
+
+
+                    <button class="enter-button" type="submit">
+                        Entrar →
+                    </button>
+
+                    <p id="message" class="message"></p>
+
+                </form>
+
+
+                <div class="divider">
+                    <span>ou</span>
+                </div>
+
+
+                <p class="signup">
+                    Ainda não tem uma conta?
+
+                    <button type="button" id="openSignup">
+                        Criar conta
+                    </button>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JANELA DE CRIAR CONTA -->
+
+    <div class="modal hidden" id="signupModal">
+
+        <div class="modal-box">
+
+            <button class="close" id="closeSignup">
+                ×
+            </button>
+
+            <h3>Criar conta</h3>
+
+            <p>
+                Cadastre um e-mail e uma senha.
+            </p>
+
+            <form id="signupForm">
+
+                <label for="signupEmail">
+                    E-mail
+                </label>
+
+                <input id="signupEmail" type="email" placeholder="seuemail@email.com" required>
+
+
+                <label for="signupPassword">
+                    Senha
+                </label>
+
+                <input id="signupPassword" type="password" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+
+
+                <button class="enter-button" type="submit">
+                    Criar conta
+                </button>
+
+                <p id="signupMessage" class="message"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/paginaLogin.js"></script>
+
+</body>
+
+</html>
